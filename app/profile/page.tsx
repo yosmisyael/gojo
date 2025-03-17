@@ -1,15 +1,20 @@
 "use client";
 
-import { User, Mail, Phone, MapPin, Award, TreePine } from "lucide-react";
+import { useState } from "react";
+import { User, Mail, Phone, MapPin, Award, TreePine, QrCode } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import Image from "next/image";
 
 export default function Profile() {
+  const [qrOpen, setQrOpen] = useState(false);
+
   const userProfile = {
-    name: "Ahmad Rizki",
-    email: "ahmad.rizki@email.com",
-    phone: "+62 812-3456-7890",
-    location: "Jakarta, Indonesia",
+    name: "Misyael Yosevian",
+    email: "yosevmisyael@gmail.com",
+    phone: "+62 812-6786-7640",
+    location: "Surabaya, Indonesia",
     contributions: [
       { label: "Pohon Ditanam", value: "25" },
       { label: "Event Diikuti", value: "8" },
@@ -23,8 +28,8 @@ export default function Profile() {
     upcomingEvents: [
       {
         title: "Penanaman 1000 Pohon",
-        date: "20 April 2024",
-        location: "Hutan Kota Bandung"
+        date: "20 April 2025",
+        location: "Pembersihan Sungai Depan ITS"
       }
     ]
   };
@@ -41,6 +46,7 @@ export default function Profile() {
               </div>
               <h1 className="text-2xl font-bold">{userProfile.name}</h1>
               <p className="text-gray-600">Green Warrior</p>
+              <p className="text-gray-500 text-sm">Point: 150</p>
             </div>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -56,7 +62,20 @@ export default function Profile() {
                 <span>{userProfile.location}</span>
               </div>
             </div>
-            <Button className="w-full mt-6">Edit Profile</Button>
+            <div className="mt-6 flex space-x-4">
+              <Button className="w-full">Edit Profile</Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="w-full" variant="outline" onClick={() => setQrOpen(true)}>
+                    <QrCode className="h-5 w-5 mr-2" /> QR Code
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="p-6 text-center">
+                  <h2 className="text-lg font-semibold mb-4">QR Code Profil</h2>
+                  <Image className="mx-auto" src="/qr.png" alt="QR Code" width={200} height={200} />
+                </DialogContent>
+              </Dialog>
+            </div>
           </Card>
 
           {/* Contributions */}
