@@ -11,8 +11,8 @@ export default function Profile() {
   const [qrOpen, setQrOpen] = useState(false);
 
   const userProfile = {
-    name: "Misyael Yosevian",
-    email: "yosevmisyael@gmail.com",
+    name: "Fahroldhi Sukirno",
+    email: "fahroldhisukrino@gmail.com",
     phone: "+62 812-6786-7640",
     location: "Surabaya, Indonesia",
     contributions: [
