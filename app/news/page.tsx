@@ -3,6 +3,8 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import React from "react";
+import Link from "next/link";
 
 const news = [
   {
@@ -61,10 +63,12 @@ export default function News() {
                 <Calendar className="h-4 w-4 mr-2" />
                 18 April 2024
               </div>
-              <Button>
-                Baca Selengkapnya
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={"/news/1"}>
+                <Button>
+                  Baca Selengkapnya
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </Card>
@@ -90,9 +94,11 @@ export default function News() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{article.title}</h3>
                 <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <Button variant="outline" className="w-full">
-                  Baca Selengkapnya
-                </Button>
+                <Link href={"/news/1"}>
+                  <Button variant="outline" className="w-full">
+                    Baca Selengkapnya
+                  </Button>
+                </Link>
               </div>
             </Card>
           ))}
