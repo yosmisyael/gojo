@@ -33,18 +33,18 @@ const news = [
 
 export default function News() {
   return (
-    <main className="min-h-screen bg-gray-50 py-12">
+    <main className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-green-900 mb-8">Berita & Artikel</h1>
 
         {/* Featured Article */}
         <Card className="mb-12 overflow-hidden">
-          <div className="grid md:grid-cols-2">
-            <div className="h-64 md:h-auto relative">
+          <div className="">
+            <div className="h-32 md:h-auto relative">
               <img
                 src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80"
                 alt="Featured"
-                className="w-full h-full object-cover"
+                className="w-full h-96"
               />
             </div>
             <div className="p-8">
