@@ -7,20 +7,20 @@ import { Button } from "@/components/ui/button";
 const events = [
   {
     id: 1,
-    title: "Penanaman 1000 Pohon",
-    date: "20 April 2024",
-    location: "Hutan Kota Bandung",
+    title: "Penanaman 100 Pohon",
+    date: "20 April 2025",
+    location: "Surabaya, Indonesia",
     time: "08:00 - 12:00 WIB",
-    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80",
+    image: "/img1.webp",
     description: "Mari bergabung dalam kegiatan penanaman 1000 pohon untuk menghijaukan kota Bandung."
   },
   {
     id: 2,
-    title: "Workshop Berkebun Urban",
-    date: "25 April 2024",
-    location: "Taman Menteng, Jakarta",
+    title: "Penanaman dan Pembersihan Sungai Keputih",
+    date: "25 April 2025",
+    location: "Surabaya, Jakarta",
     time: "09:00 - 11:00 WIB",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80",
+    image: "/img2.jpg",
     description: "Belajar teknik berkebun di area perkotaan dengan metode yang efektif dan ramah lingkungan."
   },
   // Add more events as needed
