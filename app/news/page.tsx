@@ -3,6 +3,8 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import React from "react";
+import Link from "next/link";
 
 const news = [
   {
@@ -33,18 +35,18 @@ const news = [
 
 export default function News() {
   return (
-    <main className="min-h-screen bg-gray-50 py-12">
+    <main className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-green-900 mb-8">Berita & Artikel</h1>
 
         {/* Featured Article */}
         <Card className="mb-12 overflow-hidden">
-          <div className="grid md:grid-cols-2">
-            <div className="h-64 md:h-auto relative">
+          <div className="">
+            <div className="h-32 md:h-auto relative">
               <img
                 src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80"
                 alt="Featured"
-                className="w-full h-full object-cover"
+                className="w-full h-96"
               />
             </div>
             <div className="p-8">
@@ -61,10 +63,12 @@ export default function News() {
                 <Calendar className="h-4 w-4 mr-2" />
                 18 April 2024
               </div>
-              <Button>
-                Baca Selengkapnya
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={"/news/1"}>
+                <Button>
+                  Baca Selengkapnya
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </Card>
@@ -90,9 +94,11 @@ export default function News() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{article.title}</h3>
                 <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <Button variant="outline" className="w-full">
-                  Baca Selengkapnya
-                </Button>
+                <Link href={"/news/1"}>
+                  <Button variant="outline" className="w-full">
+                    Baca Selengkapnya
+                  </Button>
+                </Link>
               </div>
             </Card>
           ))}
