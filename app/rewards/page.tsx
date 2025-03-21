@@ -13,21 +13,21 @@ export default function RedeemPoints() {
     ];
 
     const donations = [
-        { id: 1, title: 'Plant 10 Trees', points: 500, image: 'https://www.vintagetreecare.com/wp-content/uploads/2023/06/planting-tree.jpg', impact: 'Offset 2.4 tons of CO2' },
-        { id: 2, title: 'Clean Ocean Initiative', points: 750, image: 'https://www.oceanicsociety.org/wp-content/uploads/2024/07/global-ocean-cleanup-funzel-el-salvador-2.jpg', impact: 'Remove 15kg of plastic' },
-        { id: 3, title: 'Wildlife Protection', points: 1000, image: 'https://www.green.earth/hubfs/endangered%20species_baby%20sumatran%20elephant_featured.png', impact: 'Support 5 endangered species' }
+        { id: 1, title: 'Plant 10 Trees', points: 500, image: 'https://www.vintagetreecare.com/wp-content/uploads/2023/06/planting-tree.jpg', impact: 'Offset 2.4 tons of CO2', description: '' },
+        { id: 2, title: 'Clean Ocean Initiative', points: 750, image: 'https://www.oceanicsociety.org/wp-content/uploads/2024/07/global-ocean-cleanup-funzel-el-salvador-2.jpg', impact: 'Remove 15kg of plastic', description: '' },
+        { id: 3, title: 'Wildlife Protection', points: 1000, image: 'https://www.green.earth/hubfs/endangered%20species_baby%20sumatran%20elephant_featured.png', impact: 'Support 5 endangered species', description: '' }
     ];
 
     const greenGoods = [
-        { id: 4, title: 'Succulent Plant', points: 300, image: 'https://www.gardendesign.com/pictures/images/900x705Max/dream-team-s-portland-garden_6/beauty-star-calathea-calathea-ornata-pinstripe-calathea-proven-winners_17336.jpg', description: 'Indoor air purifying plant' },
-        { id: 5, title: 'Herb Garden Kit', points: 450, image: 'https://hips.hearstapps.com/hmg-prod/images/a-set-of-colorful-potted-plants-on-a-patterned-area-royalty-free-image-1716493110.jpg?crop=0.668xw:1.00xh;0.210xw,0&resize=1200:*', description: 'Grow your own herbs' },
-        { id: 6, title: 'Hanging Terrarium', points: 600, image: 'https://bonnieplants.com/cdn/shop/articles/windowsill-herb-garden-is_445ee5d4-3236-41dd-aade-373ba51508ad.jpg?v=1642541526', description: 'Decorative mini ecosystem' }
+        { id: 4, title: 'Succulent Plant', points: 300, image: 'https://www.gardendesign.com/pictures/images/900x705Max/dream-team-s-portland-garden_6/beauty-star-calathea-calathea-ornata-pinstripe-calathea-proven-winners_17336.jpg', description: 'Indoor air purifying plant', impact: "" },
+        { id: 5, title: 'Herb Garden Kit', points: 450, image: 'https://hips.hearstapps.com/hmg-prod/images/a-set-of-colorful-potted-plants-on-a-patterned-area-royalty-free-image-1716493110.jpg?crop=0.668xw:1.00xh;0.210xw,0&resize=1200:*', description: 'Grow your own herbs', impact: "" },
+        { id: 6, title: 'Hanging Terrarium', points: 600, image: 'https://bonnieplants.com/cdn/shop/articles/windowsill-herb-garden-is_445ee5d4-3236-41dd-aade-373ba51508ad.jpg?v=1642541526', description: 'Decorative mini ecosystem', impact: "" }
     ];
 
     const merchandise = [
-        { id: 7, title: 'Gojo T-Shirt', points: 400, image: '../../', description: 'Made from recycled materials' },
-        { id: 8, title: 'Reusable Water Bottle', points: 350, image: '/api/placeholder/150/150', description: 'Reduce plastic waste' },
-        { id: 9, title: 'Cap', points: 250, image: '/api/placeholder/150/150', description: 'Tailored cap for ' }
+        { id: 7, title: 'Gojo T-Shirt', points: 400, image: '../../', description: 'Made from recycled materials', impact: "" },
+        { id: 8, title: 'Reusable Water Bottle', points: 350, image: '/api/placeholder/150/150', description: 'Reduce plastic waste', impact: "" },
+        { id: 9, title: 'Cap', points: 250, image: '/api/placeholder/150/150', description: 'Tailored cap for ', impact: '' }
     ];
 
     const renderItems = () => {
@@ -63,7 +63,7 @@ export default function RedeemPoints() {
                 </div>
                 <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
-            <p className="text-gray-600 mt-2">{item.description || item.impact}</p>
+            <p className="text-gray-600 mt-2">{item.description || item?.impact}</p>
             <button
         className={`mt-4 w-full py-2 rounded-md font-medium transition-colors ${
             userPoints >= item.points
