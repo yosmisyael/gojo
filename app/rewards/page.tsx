@@ -27,7 +27,7 @@ export default function RedeemPoints() {
     const merchandise = [
         { id: 7, title: 'Gojo T-Shirt', points: 400, image: '../../', description: 'Made from recycled materials' },
         { id: 8, title: 'Reusable Water Bottle', points: 350, image: '/api/placeholder/150/150', description: 'Reduce plastic waste' },
-        { id: 9, title: 'Tote Bag', points: 250, image: '/api/placeholder/150/150', description: 'Eco-friendly shopping bag' }
+        { id: 9, title: 'Cap', points: 250, image: '/api/placeholder/150/150', description: 'Tailored cap for ' }
     ];
 
     const renderItems = () => {
@@ -86,7 +86,7 @@ export default function RedeemPoints() {
             {/* Navigation Bar */}
             <nav className="bg-green-700 text-white shadow-md">
     <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-    <Link href="/">
+    <Link href="/public">
     <div className="flex items-center space-x-2 cursor-pointer">
     <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
     <span className="text-green-700 font-bold text-lg">G</span>
@@ -204,7 +204,7 @@ export default function RedeemPoints() {
     <div>
     <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
     <ul className="space-y-2">
-    <li><Link href="/"><span className="text-green-200 hover:text-white transition-colors">Home</span></Link></li>
+    <li><Link href="/public"><span className="text-green-200 hover:text-white transition-colors">Home</span></Link></li>
     <li><Link href="/dashboard"><span className="text-green-200 hover:text-white transition-colors">Dashboard</span></Link></li>
     <li><Link href="/activities"><span className="text-green-200 hover:text-white transition-colors">Activities</span></Link></li>
     <li><Link href="/redeem"><span className="text-green-200 hover:text-white transition-colors">Redeem Points</span></Link></li>

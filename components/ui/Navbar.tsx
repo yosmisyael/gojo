@@ -26,6 +26,7 @@ export default function Navbar() {
                         <Link href="/donate" className="text-gray-600 hover:text-green-600">Donasi</Link>
                         <Link href="/news" className="text-gray-600 hover:text-green-600">Berita</Link>
                         <Link href="/profile" className="text-gray-600 hover:text-green-600">Profil</Link>
+                        <Link href="/rewards" className="block text-gray-600 hover:text-green-600">Rewards</Link>
                     </div>
                 </div>
             </div>
@@ -38,6 +39,7 @@ export default function Navbar() {
                         <Link href="/donate" className="block text-gray-600 hover:text-green-600">Donasi</Link>
                         <Link href="/news" className="block text-gray-600 hover:text-green-600">Berita</Link>
                         <Link href="/profile" className="block text-gray-600 hover:text-green-600">Profil</Link>
+                        <Link href="/rewards" className="block text-gray-600 hover:text-green-600">Rewards</Link>
                     </div>
                 </div>
             )}
