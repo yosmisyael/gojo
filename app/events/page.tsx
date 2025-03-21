@@ -11,7 +11,7 @@ const events = [
     date: "20 April 2025",
     location: "Surabaya, Indonesia",
     time: "08:00 - 12:00 WIB",
-    image: "/img1.webp",
+    image: "https://gosharpener.com/content/uploads/photos/2024/07/sngine_629d8b85950a8eb4f13607c5a9e99e13.jpg",
     description: "Mari bergabung dalam kegiatan penanaman 1000 pohon untuk menghijaukan kota Bandung."
   },
   {

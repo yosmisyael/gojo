@@ -25,9 +25,9 @@ export default function RedeemPoints() {
     ];
 
     const merchandise = [
-        { id: 7, title: 'Gojo T-Shirt', points: 400, image: '../../', description: 'Made from recycled materials', impact: "" },
-        { id: 8, title: 'Reusable Water Bottle', points: 350, image: '/api/placeholder/150/150', description: 'Reduce plastic waste', impact: "" },
-        { id: 9, title: 'Cap', points: 250, image: '/api/placeholder/150/150', description: 'Tailored cap for ', impact: '' }
+        { id: 7, title: 'Gojo Jacket', points: 400, image: 'https://raw.githubusercontent.com/yosmisyael/gojo/refs/heads/main/public/Front_JACKET.png', description: 'Made from recycled materials', impact: "" },
+        { id: 8, title: 'Reusable Water Bottle', points: 350, image: 'https://raw.githubusercontent.com/yosmisyael/gojo/refs/heads/main/public/Front_TUMBLER.png', description: 'Reduce plastic waste', impact: "" },
+        { id: 9, title: 'Cap', points: 250, image: 'https://raw.githubusercontent.com/yosmisyael/gojo/refs/heads/main/public/Front_TOPI.png', description: 'Tailored cap for ', impact: '' }
     ];
 
     const renderItems = () => {
